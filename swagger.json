@@ -1,0 +1,510 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "AppController_getHello",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/supportedtypes": {
+      "post": {
+        "operationId": "SupportedtypesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSupportedtypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      },
+      "get": {
+        "operationId": "SupportedtypesController_findAll",
+        "parameters": [
+          {
+            "name": "empId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/supportedtypes/{id}": {
+      "get": {
+        "operationId": "SupportedtypesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "empId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "operationId": "SupportedtypesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSupportedtypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "operationId": "SupportedtypesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/employees": {
+      "post": {
+        "operationId": "EmployeesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEmployeeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      },
+      "get": {
+        "operationId": "EmployeesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/employees/{id}": {
+      "get": {
+        "operationId": "EmployeesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "operationId": "EmployeesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEmployeeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "operationId": "EmployeesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/employees/proofofemployment": {
+      "post": {
+        "operationId": "EmployeesController_employmentProof",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployementProofDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/requirements": {
+      "post": {
+        "operationId": "RequirementsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRequirementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      },
+      "get": {
+        "operationId": "RequirementsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/requirements/{id}": {
+      "get": {
+        "operationId": "RequirementsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "patch": {
+        "operationId": "RequirementsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequirementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "operationId": "RequirementsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "BlackRock APIs",
+    "description": "Blackrock API documentation",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "https://api.example.com",
+      "description": "Production server"
+    },
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "CreateSupportedtypeDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "UpdateSupportedtypeDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateEmployeeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "John Doe",
+            "description": "The name of the Employee"
+          },
+          "email": {
+            "type": "string",
+            "example": "a@company.com",
+            "description": "The email of the Employee"
+          },
+          "department": {
+            "type": "string",
+            "example": "Engineering",
+            "description": "The department of the Employee"
+          },
+          "position": {
+            "type": "string",
+            "example": "Software Engineer",
+            "description": "The position of the Employee"
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "department",
+          "position"
+        ]
+      },
+      "EmployementProofDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "number",
+            "example": 1,
+            "description": "The type of the employment proof"
+          },
+          "values": {
+            "example": [
+              {
+                "startDate": "01-01-24",
+                "endDate": "01-01-25"
+              }
+            ],
+            "description": "The input values as per reason/type of the employment proof",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "empId": {
+            "type": "number",
+            "example": 1,
+            "description": "The employee id of the employment proof"
+          }
+        },
+        "required": [
+          "type",
+          "values",
+          "empId"
+        ]
+      },
+      "UpdateEmployeeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "John Doe",
+            "description": "The name of the Employee"
+          },
+          "email": {
+            "type": "string",
+            "example": "a@company.com",
+            "description": "The email of the Employee"
+          },
+          "department": {
+            "type": "string",
+            "example": "Engineering",
+            "description": "The department of the Employee"
+          },
+          "position": {
+            "type": "string",
+            "example": "Software Engineer",
+            "description": "The position of the Employee"
+          }
+        }
+      },
+      "CreateRequirementDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "number",
+            "example": "1",
+            "description": "The type/reason id of the requirement."
+          },
+          "values": {
+            "example": [
+              {
+                "startDate": "01-01-24",
+                "endDate": "01-01-25"
+              }
+            ],
+            "description": "The input values as per reason/type of the requirement.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "type",
+          "values"
+        ]
+      },
+      "UpdateRequirementDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "number",
+            "example": "1",
+            "description": "The type/reason id of the requirement."
+          },
+          "values": {
+            "example": [
+              {
+                "startDate": "01-01-24",
+                "endDate": "01-01-25"
+              }
+            ],
+            "description": "The input values as per reason/type of the requirement.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
